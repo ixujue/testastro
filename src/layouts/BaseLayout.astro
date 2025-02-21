@@ -1,25 +1,39 @@
 ---
+// 导入必要的组件和样式
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+// 从组件属性中获取页面标题
 const { pageTitle } = Astro.props;
 ---
+
+<!-- 基础布局组件：为所有页面提供统一的HTML结构和布局 -->
+<!-- 设置中文语言环境 -->
 <html lang="zh-cn">
 	<head>
+		<!-- 设置文档字符编码为UTF-8 -->
 		<meta charset="utf-8" />
+		<!-- 设置网站图标 -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- 设置响应式视口 -->
 		<meta name="viewport" content="width=device-width" />
+		<!-- Astro生成器标识 -->
 		<meta name="generator" content={Astro.generator} />
+		<!-- 动态页面标题 -->
 		<title>{pageTitle}</title>
 	</head>
 	<body>
+		<!-- 页面头部组件，包含导航栏 -->
 		<Header />
+		<!-- 显示页面标题 -->
 		<h1>{pageTitle}</h1>
-		<p>这是我的第一个 Astro 站点！</p>
-
-
-
+        
+        <!-- 插槽：用于插入页面特定内容 -->
+        <slot />
+        <!-- 页面底部组件，包含社交链接 -->
         <Footer />
+		<!-- 导入菜单交互脚本 -->
 		<script>
 			import "../scripts/menu.js";
 		</script>

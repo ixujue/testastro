@@ -1,10 +1,16 @@
 ---
+// 导入必要的子组件
 import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 ---
+
+<!-- 页面头部组件：包含导航栏和汉堡菜单按钮 -->
 <header>
+ <!-- 导航区域 -->
  <nav>
+   <!-- 汉堡菜单按钮：用于移动端显示/隐藏导航菜单 -->
    <Hamburger />
+   <!-- 导航链接列表 -->
    <Navigation />
  </nav>
 </header>

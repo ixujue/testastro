@@ -1,13 +1,20 @@
 ---
+// 从组件属性中获取平台名称和用户名
 const { platform, username } = Astro.props;
 ---
+<!-- 社交媒体链接：根据传入的平台和用户名生成对应的社交媒体链接 -->
 <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
 
 <style>
+    /* 社交媒体链接样式 */
     a {
+      /* 设置内边距，使按钮更易点击 */
       padding: 0.5rem 1rem;
+      /* 设置文字颜色为白色 */
       color: white;
+      /* 设置深紫色背景 */
       background-color: #4c1d95;
+      /* 移除下划线 */
       text-decoration: none;
     }
   </style>

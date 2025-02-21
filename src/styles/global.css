@@ -1,8 +1,10 @@
+/* 基础HTML样式设置 */
 html {
     background-color: #f1f5f9;
     font-family: sans-serif;
   }
   
+  /* 页面主体布局设置 */
   body {
     margin: 0 auto;
     width: 100%;
@@ -11,22 +13,26 @@ html {
     line-height: 1.5;
   }
   
+  /* 全局盒模型设置 */
   * {
     box-sizing: border-box;
   }
   
+  /* 标题样式 */
   h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
   }
 
-  /* 导航样式 */
+  /* 导航栏样式设置 */
 
+  /* 汉堡菜单按钮样式 */
   .hamburger {
     padding-right: 20px;
     cursor: pointer;
   }
   
+  /* 汉堡菜单的横线样式 */
   .hamburger .line {
     display: block;
     width: 40px;
@@ -35,15 +41,17 @@ html {
     background-color: #ff9776;
   }
 
+/* 导航链接容器样式 */
 .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
     background-color: #ff9776;
-    display: none;
+    display: none; /* 默认隐藏导航链接 */
     margin: 0;
   }
   
+  /* 导航链接样式 */
   .nav-links a {
     display: block;
     text-align: center;
@@ -54,16 +62,20 @@ html {
     text-transform: uppercase;
   }
   
+  /* 导航链接悬停和焦点状态 */
   .nav-links a:hover,
   .nav-links a:focus {
     background-color: #ff9776;
   }
   
+  /* 展开状态的导航链接 */
   .expanded {
     display: unset;
   }
   
+  /* 响应式布局设置 */
   @media screen and (min-width: 636px) {
+    /* 大屏幕导航链接样式 */
     .nav-links {
       margin-left: 5em;
       display: block;
@@ -72,11 +84,13 @@ html {
       background: none;
     }
   
+    /* 大屏幕导航链接布局 */
     .nav-links a {
       display: inline-block;
       padding: 15px 20px;
     }
 
+    /* 大屏幕隐藏汉堡菜单 */
     .hamburger {
         display: none;
     }
